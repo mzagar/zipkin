@@ -76,11 +76,7 @@ object Zipkin extends Build {
     crossPaths := false,            /* Removes Scala version from artifact name */
     fork := true, // forking prevents runaway thread pollution of sbt
     baseDirectory in run := file(cwd), // necessary for forking
-    resolvers := Seq(
-      Resolver.jcenterRepo,
-      Resolver.typesafeRepo("releases"),
-      "Twitter Maven Repository" at "https://maven.twttr.com/" // for thrift 0.5
-    ),
+    resolvers += "twitter-repo" at "http://maven.twttr.com", // for thrift 0.5
     dependencyOverrides ++= Set(
       "org.apache.zookeeper" % "zookeeper" % "3.4.6", // internal twitter + kafka + curator
       "org.slf4j" % "slf4j-api" % "1.6.4" // libthrift 0.5 otherwise pins 1.5.x
