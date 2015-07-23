@@ -15,7 +15,7 @@ dependencies {
 	compile util('core'), algebird('core'), ostrich,
 			finagle('ostrich4', 'thrift', 'zipkin'),
 			scroogeDep('core', 'serializer'),
-			project(':zipkin-common')
+			zipkin('common')
 
 	testCompile scalaTestDeps
 }

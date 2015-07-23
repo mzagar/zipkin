@@ -12,6 +12,7 @@ subprojects {
         util = mkDepGen { "com.twitter:util-${it}_${scalaInterfaceVersion}:6.25.0" }
         scroogeDep = mkDepGen { "com.twitter:scrooge-${it}_${scalaInterfaceVersion}:3.19.0" }
         algebird = mkDepGen { "com.twitter:algebird-${it}_${scalaInterfaceVersion}:0.10.2" }
+        zipkin = mkDepGen { project(":zipkin-${it}") }
 
         hbaseOne = { "org.apache.hbase:hbase${if (it) "" else "-${it}"}:0.98.13-hadoop2" }
         hbaseDep = mkDepGen hbaseOne

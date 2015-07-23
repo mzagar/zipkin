@@ -10,7 +10,7 @@ dependencies {
 			"com.twitter:scalding-core_${scalaInterfaceVersion}:0.15.0",
 			hadoop('client'),
 			util('logging', 'app'),
-			project(':zipkin-scrooge')
+			zipkin('scrooge')
 
 	testCompile 'org.mockito:mockito-all:1.10.9',
 			testDependencies, scalaTestDeps
