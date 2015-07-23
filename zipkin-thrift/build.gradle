@@ -1,1 +1,11 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
 
+	dependencies {
+		classpath griddle
+	}
+}
+
+apply plugin: 'idl'

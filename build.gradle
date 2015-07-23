@@ -31,6 +31,7 @@ subprojects {
         junit = 'junit:junit:4.12'
 //        val slf4jLog4j12 = "org.slf4j" % "slf4j-log4j12" % "1.6.4" % "runtime"
         ostrich = "com.twitter:ostrich_${scalaInterfaceVersion}:9.9.0"
+        griddle = 'com.yodle.griddle:griddle:1.7'
 
         scalaTestDeps = [
                 "org.scalatest:scalatest_${scalaInterfaceVersion}:2.2.5",

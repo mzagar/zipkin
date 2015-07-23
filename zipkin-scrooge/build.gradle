@@ -4,7 +4,7 @@ buildscript {
 	}
 
 	dependencies {
-		classpath 'com.yodle.griddle:griddle:1.7'
+		classpath griddle
 	}
 }
 apply plugin: 'scrooge'
