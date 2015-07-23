@@ -1,0 +1,14 @@
+repositories {
+	// for storm-kafka
+	maven { url "https://clojars.org/repo" }
+	// com.twitter:kafka
+	maven { url "http://conjars.org/repo" }
+}
+
+dependencies {
+	compile "com.twitter:tormenta-kafka_${scalaInterfaceVersion}:0.10.0",
+			scroogeDep('serializer'),
+			zipkin('collector-core', 'scrooge')
+
+	testCompile testDependencies
+}

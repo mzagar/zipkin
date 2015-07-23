@@ -6,16 +6,24 @@ rootProject.name = 'zipkin'
 // Not all projects depend on this!
 include 'zipkin-common'
 
+/////////////////////////////////////
+// Collector, and Collector inputs //
+/////////////////////////////////////
+
+//include 'zipkin-collector'
+include 'zipkin-collector-core'
+//include 'zipkin-collector-scribe'
+
 /////////////////////////////////////////////////////
 // Libraries wrapping clients to external services //
 /////////////////////////////////////////////////////
-include "zipkin-zookeeper"
-include "zipkin-cassandra"
-include "zipkin-anormdb"
-//include "zipkin-kafka"
-//include "zipkin-redis"
-//include "zipkin-mongodb"
-//include "zipkin-hbase"
+include 'zipkin-zookeeper'
+include 'zipkin-cassandra'
+include 'zipkin-anormdb'
+include 'zipkin-kafka'
+//include 'zipkin-redis'
+//include 'zipkin-mongodb'
+//include 'zipkin-hbase'
 
 ////////////
 // Thrift //

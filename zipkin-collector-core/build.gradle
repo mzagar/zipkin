@@ -1,0 +1,9 @@
+dependencies {
+	compile algebird('core'), twitterServer, ostrich,
+			finagle('ostrich4', 'serversets', 'thrift', 'zipkin'),
+			util('core', 'zk', 'zk-common'),
+			zk('candidate', 'group'),
+			zipkin('common', 'scrooge')
+
+	testCompile testDependencies
+}

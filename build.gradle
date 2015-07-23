@@ -32,9 +32,9 @@ subprojects {
 
         // Instead of Seq(util("foo"), util("bar"), ...) we can now write many(util, "foo", "bar", ...)
 
-//        val twitterServer = "com.twitter" %% "twitter-server" % "1.11.0"
+        twitterServer = "com.twitter:twitter-server_${scalaInterfaceVersion}:1.11.0"
         junit = 'junit:junit:4.12'
-//        val slf4jLog4j12 = "org.slf4j" % "slf4j-log4j12" % "1.6.4" % "runtime"
+//        slf4jLog4j12 = "org.slf4j:slf4j-log4j12:1.6.4"  // Dont forget to use for configuration 'runtime' only
         ostrich = "com.twitter:ostrich_${scalaInterfaceVersion}:9.9.0"
         griddle = 'com.yodle.griddle:griddle:1.7'
 
