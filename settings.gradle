@@ -1,1 +1,8 @@
 rootProject.name = 'zipkin'
+
+////////////////////////////////////
+// Zipkin's mostly common library //
+////////////////////////////////////
+// Not all projects depend on this!
+include 'zipkin-common'
+

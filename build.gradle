@@ -1,21 +1,61 @@
-// Apply the java plugin to add support for Java
-apply plugin: 'java'
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'scala'
 
-// In this section you declare where to find the dependencies of your project
-repositories {
-    // Use 'jcenter' for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
-}
+    ext {
+        ////////////////////////////////
+        // Commonly used dependencies //
+        ////////////////////////////////
 
-// In this section you declare the dependencies for your production and test code
-dependencies {
-    // The production code uses the SLF4J logging API at compile time
-    compile 'org.slf4j:slf4j-api:1.7.12'
+        finagle = { name -> "com.twitter:finagle-${name}_${scalaInterfaceVersion}:6.26.0" }
+        util = { name -> "com.twitter:util-${name}_${scalaInterfaceVersion}:6.25.0" }
+        scroogeDep = { name -> "com.twitter:scrooge-${name}_${scalaInterfaceVersion}:3.19.0" }
+        algebird = { name -> "com.twitter:algebird-${name}_${scalaInterfaceVersion}:0.10.2" }
+//        hbaseDep(name: String) = "org.apache.hbase" % ("hbase" + (if (name.isEmpty) "" else "-" + name)) % "0.98.13-hadoop2"
+//        hbaseTest(name: String) = hbaseDep(name) classifier("tests") classifier("")
+//        hadoop(name: String) = "org.apache.hadoop" % ("hadoop-" + name) % "2.4.0"
+//        hadoopTest(name: String) = hadoop(name) classifier("tests") classifier("")
 
-    // Declare the dependency for your favourite test framework you want to use in your tests.
-    // TestNG is also supported by the Gradle Test task. Just change the
-    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
-    // 'test.useTestNG()' to your build script.
-    testCompile 'junit:junit:4.12'
+        twitterZookeeperVersions = [
+                'candidate': "0.0.75",
+                'group': "0.0.81",
+                'client': "0.0.70",
+                'server-set': "1.0.103"
+        ]
+        zk   = { name -> "com.twitter.common.zookeeper:${name}:${twitterZookeeperVersions[name]}" }
+
+        // Instead of Seq(util("foo"), util("bar"), ...) we can now write many(util, "foo", "bar", ...)
+        many = { gen, String... names -> names.collect(gen) }
+
+//        val twitterServer = "com.twitter" %% "twitter-server" % "1.11.0"
+        junit = 'junit:junit:4.12'
+//        val slf4jLog4j12 = "org.slf4j" % "slf4j-log4j12" % "1.6.4" % "runtime"
+        ostrich = "com.twitter:ostrich_${scalaInterfaceVersion}:9.9.0"
+
+        scalaTestDeps = [
+                "org.scalatest:scalatest_${scalaInterfaceVersion}:2.2.5",
+                junit
+        ]
+    }
+
+
+
+    // SBT migration note: start of zipkinSettings
+    group "io.zipkin"
+    version zipkinVersion
+
+    repositories {
+        jcenter()
+        maven { url "https://maven.twttr.com/" }
+        maven { url "http://repo.typesafe.com/typesafe/releases/" }
+    }
+
+    dependencies {
+        compile "org.scala-lang:scala-library:${scalaVersion}",
+                // Was dependencyOverrides in SBT, will probably cause issues
+                'org.apache.zookeeper:zookeeper:3.4.6', // internal twitter + kafka + curator
+                'org.slf4j:slf4j-api:1.6.4' // libthrift 0.5 otherwise pins 1.5.x
+                // EOF dependencyOverrides
+    }
+    // SBT migration note: end of zipkinSettings
 }
