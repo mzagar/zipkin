@@ -7,3 +7,5 @@ dependencies {
 
 	testCompile testDependencies, scalaTestDeps
 }
+
+test.maxParallelForks = 1

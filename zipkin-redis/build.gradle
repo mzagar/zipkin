@@ -12,3 +12,5 @@ dependencies {
 sourceSets.test.resources {
 	srcDir 'config'
 }
+
+test.maxParallelForks = 1
