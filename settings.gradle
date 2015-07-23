@@ -6,3 +6,9 @@ rootProject.name = 'zipkin'
 // Not all projects depend on this!
 include 'zipkin-common'
 
+////////////
+// Thrift //
+////////////
+
+include 'zipkin-thrift'
+include 'zipkin-scrooge'

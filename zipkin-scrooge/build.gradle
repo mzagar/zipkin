@@ -1,0 +1,23 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+
+	dependencies {
+		classpath 'com.yodle.griddle:griddle:1.7'
+	}
+}
+apply plugin: 'scrooge'
+
+dependencies {
+	scroogeGen scroogeDep('generator')
+
+	compile util('core'), algebird('core'), ostrich,
+			finagle('ostrich4', 'thrift', 'zipkin'),
+			scroogeDep('core', 'serializer'),
+			project(':zipkin-common')
+
+	testCompile scalaTestDeps
+}
+
+thriftSrcDir = "${project(':zipkin-thrift').projectDir}/src/main/thrift/com/twitter/zipkin"
