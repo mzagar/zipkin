@@ -7,10 +7,11 @@ subprojects {
         // Commonly used dependencies //
         ////////////////////////////////
 
-        finagle = { name -> "com.twitter:finagle-${name}_${scalaInterfaceVersion}:6.26.0" }
-        util = { name -> "com.twitter:util-${name}_${scalaInterfaceVersion}:6.25.0" }
-        scroogeDep = { name -> "com.twitter:scrooge-${name}_${scalaInterfaceVersion}:3.19.0" }
-        algebird = { name -> "com.twitter:algebird-${name}_${scalaInterfaceVersion}:0.10.2" }
+        mkDepGen = { genOne -> { String... names -> names.collect(genOne) } }
+        finagle = mkDepGen { "com.twitter:finagle-${it}_${scalaInterfaceVersion}:6.26.0" }
+        util = mkDepGen { "com.twitter:util-${it}_${scalaInterfaceVersion}:6.25.0" }
+        scroogeDep = mkDepGen { "com.twitter:scrooge-${it}_${scalaInterfaceVersion}:3.19.0" }
+        algebird = mkDepGen { "com.twitter:algebird-${it}_${scalaInterfaceVersion}:0.10.2" }
 //        hbaseDep(name: String) = "org.apache.hbase" % ("hbase" + (if (name.isEmpty) "" else "-" + name)) % "0.98.13-hadoop2"
 //        hbaseTest(name: String) = hbaseDep(name) classifier("tests") classifier("")
 //        hadoop(name: String) = "org.apache.hadoop" % ("hadoop-" + name) % "2.4.0"
@@ -22,10 +23,9 @@ subprojects {
                 'client': "0.0.70",
                 'server-set': "1.0.103"
         ]
-        zk   = { name -> "com.twitter.common.zookeeper:${name}:${twitterZookeeperVersions[name]}" }
+        zk = mkDepGen { "com.twitter.common.zookeeper:${it}:${twitterZookeeperVersions[it]}" }
 
         // Instead of Seq(util("foo"), util("bar"), ...) we can now write many(util, "foo", "bar", ...)
-        many = { gen, String... names -> names.collect(gen) }
 
 //        val twitterServer = "com.twitter" %% "twitter-server" % "1.11.0"
         junit = 'junit:junit:4.12'
