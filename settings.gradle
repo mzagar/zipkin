@@ -23,7 +23,7 @@ include 'zipkin-anormdb'
 include 'zipkin-kafka'
 include 'zipkin-redis'
 include 'zipkin-mongodb'
-//include 'zipkin-hbase'
+include 'zipkin-hbase'
 
 ////////////
 // Thrift //

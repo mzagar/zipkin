@@ -5,7 +5,7 @@ repositories {
 dependencies {
 	compile 'commons-codec:commons-codec:1.6',
 			finagle('serversets'),
-			scroogeDep('serializer'),
+			scrooge('serializer'),
 			'org.iq80.snappy:snappy:0.3',
 			"com.twitter:scalding-core_${scalaInterfaceVersion}:0.15.0",
 			hadoop('client'),

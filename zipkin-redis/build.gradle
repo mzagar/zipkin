@@ -1,7 +1,7 @@
 dependencies {
 	compile finagle('redis'),
 			util('logging'),
-			scroogeDep('serializer'),
+			scrooge('serializer'),
 			zipkin('common', 'scrooge')
 
 	runtime slf4jLog4j12

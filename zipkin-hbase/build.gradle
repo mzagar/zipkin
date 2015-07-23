@@ -1,0 +1,25 @@
+dependencies {
+	compile hadoop('common'),
+			'com.google.protobuf:protobuf-java:2.4.1',
+			'commons-logging:commons-logging:1.1.1',
+			'commons-configuration:commons-configuration:1.6',
+			util('logging'),
+			scrooge('serializer'),
+			hbase('', 'common', 'client'),
+			zipkin('scrooge')
+
+	testCompile	'com.google.guava:guava:11.0.2', //Hadoop needs a deprecated class
+			'com.google.guava:guava-io:r03', //Hadoop needs a deprecated class
+			hbaseTest('common', 'client', 'server', 'hadoop-compat', 'hadoop2-compat'),
+			hadoopTest('mapreduce-client-jobclient', 'common', 'hdfs'),
+			testDependencies, scalaTestDeps
+
+	runtime('org.apache.zookeeper:zookeeper:3.4.6') { transitive = false }
+	runtime slf4jLog4j12
+}
+
+//sourceSets.test.java {
+//	srcDir 'src/test/guava-hack/src'
+//}
+
+test.maxParallelForks = 1

@@ -10,11 +10,11 @@ buildscript {
 apply plugin: 'scrooge'
 
 dependencies {
-	scroogeGen scroogeDep('generator')
+	scroogeGen scrooge('generator')
 
 	compile util('core'), algebird('core'), ostrich,
 			finagle('ostrich4', 'thrift', 'zipkin'),
-			scroogeDep('core', 'serializer'),
+			scrooge('core', 'serializer'),
 			zipkin('common')
 
 	testCompile scalaTestDeps
