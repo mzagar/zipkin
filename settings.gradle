@@ -21,7 +21,7 @@ include 'zipkin-zookeeper'
 include 'zipkin-cassandra'
 include 'zipkin-anormdb'
 include 'zipkin-kafka'
-//include 'zipkin-redis'
+include 'zipkin-redis'
 //include 'zipkin-mongodb'
 //include 'zipkin-hbase'
 

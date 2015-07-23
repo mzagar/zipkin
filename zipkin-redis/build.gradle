@@ -1,0 +1,14 @@
+dependencies {
+	compile finagle('redis'),
+			util('logging'),
+			scroogeDep('serializer'),
+			zipkin('common', 'scrooge')
+
+	runtime slf4jLog4j12
+
+	testCompile testDependencies, scalaTestDeps
+}
+
+sourceSets.test.resources {
+	srcDir 'config'
+}
