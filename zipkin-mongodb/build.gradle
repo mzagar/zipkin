@@ -1,0 +1,9 @@
+dependencies {
+	compile "org.mongodb:casbah_${scalaInterfaceVersion}:2.8.1",
+			util('logging'),
+			zipkin('common', 'scrooge')
+
+	runtime slf4jLog4j12
+
+	testCompile testDependencies, scalaTestDeps
+}
