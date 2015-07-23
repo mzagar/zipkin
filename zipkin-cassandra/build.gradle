@@ -1,0 +1,17 @@
+repositories {
+	maven { url 'http://conjars.org/repo' }
+}
+
+dependencies {
+	compile 'commons-codec:commons-codec:1.6',
+			finagle('serversets'),
+			scroogeDep('serializer'),
+			'org.iq80.snappy:snappy:0.3',
+			"com.twitter:scalding-core_${scalaInterfaceVersion}:0.15.0",
+			hadoop('client'),
+			util('logging', 'app'),
+			project(':zipkin-scrooge')
+
+	testCompile 'org.mockito:mockito-all:1.10.9',
+			testDependencies, scalaTestDeps
+}

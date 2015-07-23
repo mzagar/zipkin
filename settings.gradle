@@ -10,7 +10,7 @@ include 'zipkin-common'
 // Libraries wrapping clients to external services //
 /////////////////////////////////////////////////////
 include "zipkin-zookeeper"
-//include "zipkin-cassandra"
+include "zipkin-cassandra"
 //include "zipkin-anormdb"
 //include "zipkin-kafka"
 //include "zipkin-redis"
