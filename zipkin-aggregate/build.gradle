@@ -3,11 +3,6 @@
 //  - TODO BuildProperties is not ported at all
 apply from: '../gradle-onejar.plugin'
 
-// Required by transitive dependencies via zipkin-cassandra
-repositories {
-	maven { url 'http://conjars.org/repo' }
-}
-
 dependencies {
 	compile zipkin('cassandra', 'common')
 }
