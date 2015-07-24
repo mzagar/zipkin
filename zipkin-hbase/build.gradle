@@ -18,8 +18,8 @@ dependencies {
 	runtime slf4jLog4j12
 }
 
-//sourceSets.test.java {
-//	srcDir 'src/test/guava-hack/src'
-//}
+sourceSets.test.java {
+	srcDir 'src/test/guava-hack/src'
+}
 
 test.maxParallelForks = 1
