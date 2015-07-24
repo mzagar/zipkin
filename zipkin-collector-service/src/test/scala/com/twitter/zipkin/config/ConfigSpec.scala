@@ -20,9 +20,9 @@ import com.twitter.ostrich.admin.RuntimeEnvironment
 import com.twitter.util.Eval
 import com.twitter.zipkin.builder.Builder
 import com.twitter.zipkin.collector.ZipkinCollector
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 
-class ConfigSpec extends Specification {
+class ConfigSpec extends SpecificationWithJUnit {
   "/config" should {
     val eval = new Eval
 

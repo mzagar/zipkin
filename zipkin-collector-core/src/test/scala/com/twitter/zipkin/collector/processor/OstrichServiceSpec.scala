@@ -19,9 +19,9 @@ package com.twitter.zipkin.collector.processor
 import com.twitter.zipkin.thriftscala
 import com.twitter.zipkin.common.{Span, Endpoint, Annotation}
 import com.twitter.ostrich.stats.{Histogram, Distribution, Stats}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 
-class OstrichServiceSpec extends Specification {
+class OstrichServiceSpec extends SpecificationWithJUnit {
   val histogram = Histogram()
   histogram.add(10)
   val distribution = new Distribution(histogram)

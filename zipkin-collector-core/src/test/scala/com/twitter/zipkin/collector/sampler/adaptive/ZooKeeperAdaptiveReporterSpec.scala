@@ -25,9 +25,9 @@ import org.apache.zookeeper.{CreateMode, ZooKeeper}
 import org.apache.zookeeper.ZooDefs.Ids
 import org.apache.zookeeper.data.Stat
 import org.specs.mock.{ClassMocker, JMocker}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 
-class ZooKeeperAdaptiveReporterSpec extends Specification with JMocker with ClassMocker {
+class ZooKeeperAdaptiveReporterSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
 
   val samplerTimer = mock[Timer]
 

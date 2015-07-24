@@ -2,14 +2,14 @@ package com.twitter.zipkin.config
 
 import com.sun.net.httpserver.HttpExchange
 import com.twitter.ostrich.admin.CustomHttpHandler
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{JMocker, ClassMocker}
 import com.twitter.zipkin.config.sampler.AdjustableRateConfig
 
 /**
  * Test endpoints for getting and setting configurations for sample rate and storage request rate
  */
-class ConfigRequestHandlerSpec extends Specification with JMocker with ClassMocker {
+class ConfigRequestHandlerSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
   "ConfigRequestHandler" should {
 
     val sampleRateConfig = mock[AdjustableRateConfig]

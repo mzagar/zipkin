@@ -19,9 +19,9 @@ import com.twitter.zipkin.collector.sampler.adaptive.BoundedBuffer
 import com.twitter.zipkin.config.sampler.AdjustableRateConfig
 import com.twitter.zipkin.config.sampler.adaptive.ZooKeeperAdaptiveSamplerConfig
 import org.specs.mock.{JMocker, ClassMocker}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 
-class LeaderPolicySpec extends Specification with JMocker with ClassMocker {
+class LeaderPolicySpec extends SpecificationWithJUnit with JMocker with ClassMocker {
 
   val _config = mock[ZooKeeperAdaptiveSamplerConfig]
   val _sampleRate = mock[AdjustableRateConfig]

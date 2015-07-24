@@ -18,11 +18,11 @@ package com.twitter.zipkin.query.conversions
 import com.twitter.zipkin.common._
 import com.twitter.zipkin.thriftscala
 import com.twitter.zipkin.query.{Trace, TimelineAnnotation, TraceTimeline}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{ClassMocker, JMocker}
 import java.nio.ByteBuffer
 
-class TraceTimelineSpec extends Specification with JMocker with ClassMocker {
+class TraceTimelineSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
 
 
 //T = 0	 koalabird-cuckoo	 ValuesFromSource	 Server receive	 10.34.238.111 ():9149

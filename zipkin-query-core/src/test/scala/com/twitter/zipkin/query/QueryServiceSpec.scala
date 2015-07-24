@@ -23,10 +23,10 @@ import com.twitter.zipkin.thriftscala
 import com.twitter.zipkin.query.adjusters.{TimeSkewAdjuster, NullAdjuster}
 import com.twitter.zipkin.storage._
 import java.nio.ByteBuffer
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{ClassMocker, JMocker}
 
-class QueryServiceSpec extends Specification with JMocker with ClassMocker {
+class QueryServiceSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
   val ep1 = Endpoint(123, 123, "service1")
   val ep2 = Endpoint(234, 234, "service2")
   val ep3 = Endpoint(345, 345, "service3")

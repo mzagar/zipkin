@@ -20,7 +20,7 @@ package com.twitter.zipkin.storage.anormdb
 import org.specs._
 import java.sql.{Connection, SQLRecoverableException, SQLNonTransientException}
 
-class DBSpec extends Specification {
+class DBSpec extends SpecificationWithJUnit {
 
   "DB" should {
     "retry if SQLRecoverableException is thrown" in {

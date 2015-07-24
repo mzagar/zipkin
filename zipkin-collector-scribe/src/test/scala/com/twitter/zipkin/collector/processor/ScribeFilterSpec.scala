@@ -20,10 +20,10 @@ import com.twitter.scrooge.BinaryThriftStructSerializer
 import com.twitter.zipkin.common.{Annotation, Span}
 import com.twitter.zipkin.conversions.thrift._
 import com.twitter.zipkin.thriftscala
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{JMocker, ClassMocker}
 
-class ScribeFilterSpec extends Specification with JMocker with ClassMocker {
+class ScribeFilterSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
   val serializer = new BinaryThriftStructSerializer[thriftscala.Span] {
     def codec = thriftscala.Span
   }

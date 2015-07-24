@@ -18,9 +18,9 @@ package com.twitter.zipkin.collector.filter
 
 import com.twitter.zipkin.common.{Endpoint, Annotation, Span}
 import com.twitter.zipkin.thriftscala
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 
-class ClientIndexFilterSpec extends Specification {
+class ClientIndexFilterSpec extends SpecificationWithJUnit {
 
   val filter = new ClientIndexFilter
 

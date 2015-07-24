@@ -19,11 +19,11 @@ import com.twitter.conversions.time._
 import com.twitter.zipkin.config.sampler.adaptive.ZooKeeperAdaptiveSamplerConfig
 import com.twitter.zipkin.config.sampler.AdjustableRateConfig
 import com.twitter.zipkin.collector.sampler.adaptive.BoundedBuffer
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{JMocker, ClassMocker}
 import com.twitter.util.{MockTimer, Time}
 
-class PolicyFilterSpec extends Specification with JMocker with ClassMocker {
+class PolicyFilterSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
 
   val _config = mock[ZooKeeperAdaptiveSamplerConfig]
   val _storageRequestRate = mock[AdjustableRateConfig]

@@ -23,10 +23,10 @@ import com.twitter.zipkin.config.sampler.adaptive.ZooKeeperAdaptiveSamplerConfig
 import com.twitter.zipkin.config.sampler.AdjustableRateConfig
 import org.apache.zookeeper.ZooKeeper
 import org.specs.mock.{ClassMocker, JMocker}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import scala.collection.JavaConverters._
 
-class ZooKeeperAdaptiveLeaderSpec extends Specification with JMocker with ClassMocker {
+class ZooKeeperAdaptiveLeaderSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
   val samplerTimer = mock[Timer]
 
   "ZooKeeperAdaptiveLeader" should {

@@ -19,10 +19,10 @@ package com.twitter.zipkin.collector.filter
 import com.twitter.finagle.Service
 import com.twitter.zipkin.common.Span
 import com.twitter.zipkin.collector.sampler.{EverythingGlobalSampler, NullGlobalSampler}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{JMocker, ClassMocker}
 
-class SamplerFilterSpec extends Specification with JMocker with ClassMocker {
+class SamplerFilterSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
 
   "SamplerFilter" should {
     val mockService = mock[Service[Span, Unit]]

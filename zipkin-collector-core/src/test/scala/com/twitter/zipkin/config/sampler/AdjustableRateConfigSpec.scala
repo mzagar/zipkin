@@ -15,10 +15,10 @@
  */
 package com.twitter.zipkin.config.sampler
 
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{ClassMocker, JMocker}
 
-class AdjustableRateConfigSpec extends Specification with JMocker with ClassMocker {
+class AdjustableRateConfigSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
 
   "ReadOnlyAdjustableRateConfig" should {
     val sampleRateConfig = mock[AdjustableRateConfig]

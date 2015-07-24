@@ -18,11 +18,11 @@ package com.twitter.zipkin.collector
 
 import com.twitter.finagle.Service
 import com.twitter.zipkin.common.{Annotation, Endpoint, Span}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{ClassMocker, JMocker}
 import java.util.concurrent.BlockingQueue
 
-class WriteQueueWorkerSpec extends Specification with JMocker with ClassMocker {
+class WriteQueueWorkerSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
   "WriteQueueWorker" should {
     "hand off to processor" in {
       val service = mock[Service[Span, Unit]]

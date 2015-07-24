@@ -17,10 +17,10 @@
 package com.twitter.zipkin.collector.processor
 
 import com.twitter.finagle.Service
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{JMocker, ClassMocker}
 
-class FanoutServiceSpec extends Specification with JMocker with ClassMocker {
+class FanoutServiceSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
   "FanoutService" should {
     "fanout" in {
       val serv1 = mock[Service[Int, Unit]]

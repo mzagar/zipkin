@@ -19,9 +19,9 @@ package com.twitter.zipkin.collector.sampler
 
 import com.twitter.zipkin.config.sampler.AdjustableRateConfig
 import org.specs.mock.{ClassMocker, JMocker}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 
-class ZooKeeperGlobalSamplerSpec extends Specification with JMocker with ClassMocker {
+class ZooKeeperGlobalSamplerSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
   "Sample" should {
 
     "keep 10% of traces" in {

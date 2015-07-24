@@ -19,11 +19,11 @@ import com.twitter.concurrent.Broker
 import com.twitter.util.Try
 import com.twitter.zk.{ZOp, ZNode, ZkClient}
 import org.apache.zookeeper.{Watcher, WatchedEvent}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{ClassMocker, JMocker}
 
 
-class ZooKeeperAdjustableRateConfigSpec extends Specification with JMocker with ClassMocker {
+class ZooKeeperAdjustableRateConfigSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
 
   "ZooKeeperAdjustableRateConfig" should {
     val KeySampleRate = "samplerate"

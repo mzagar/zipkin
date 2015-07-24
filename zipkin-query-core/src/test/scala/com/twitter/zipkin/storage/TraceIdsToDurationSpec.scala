@@ -16,11 +16,11 @@
 package com.twitter.zipkin.storage
 
 import com.twitter.zipkin.query.{QueryService, adjusters}
-import org.specs.Specification
+import org.specs.SpecificationWithJUnit
 import org.specs.mock.{ClassMocker, JMocker}
 import com.twitter.util.{Await, Future}
 
-class TraceIdsToDurationSpec extends Specification with JMocker with ClassMocker {
+class TraceIdsToDurationSpec extends SpecificationWithJUnit with JMocker with ClassMocker {
 
   "TraceIdsToDuration" should {
 
