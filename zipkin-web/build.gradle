@@ -1,5 +1,5 @@
 // SBT migration notes:
-//  - using gradle-onjar plugin for PackageDist; the `build` task now generates a fat jar
+//  - using gradle-onejar plugin for PackageDist; the `build` task now generates a fat jar
 //  - TODO BuildProperties is not ported at all
 apply from: '../gradle-onejar.plugin'
 ext {

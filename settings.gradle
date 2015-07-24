@@ -16,7 +16,7 @@ include 'zipkin-common'
 //include 'zipkin-collector-service'
 //include 'zipkin-query-service'
 include 'zipkin-web'
-//include 'zipkin-aggregate'
+include 'zipkin-aggregate'
 
 ///////////////
 // Receivers //
