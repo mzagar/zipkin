@@ -14,9 +14,17 @@ include 'zipkin-collector'
 include 'zipkin-collector-core'
 include 'zipkin-collector-scribe'
 
+/////////////////
+// Query logic //
+/////////////////
+
+include 'zipkin-query'
+include 'zipkin-query-core'
+
 /////////////////////////////////////////////////////
 // Libraries wrapping clients to external services //
 /////////////////////////////////////////////////////
+
 include 'zipkin-zookeeper'
 include 'zipkin-cassandra'
 include 'zipkin-anormdb'
