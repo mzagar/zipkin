@@ -9,8 +9,4 @@ dependencies {
 	testCompile testDependencies, scalaTestDeps
 }
 
-sourceSets.test.resources {
-	srcDir 'config'
-}
-
 test.maxParallelForks = 1
