@@ -10,7 +10,7 @@ include 'zipkin-common'
 // Collector, and Collector inputs //
 /////////////////////////////////////
 
-//include 'zipkin-collector'
+include 'zipkin-collector'
 include 'zipkin-collector-core'
 //include 'zipkin-collector-scribe'
 

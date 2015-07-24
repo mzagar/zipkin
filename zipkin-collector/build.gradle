@@ -1,0 +1,8 @@
+dependencies {
+	compile finagle('core'),
+			util('core'),
+			twitterServer,
+			zipkin('common', 'scrooge')
+
+	testCompile scalaTestDeps
+}
