@@ -12,7 +12,7 @@ include 'zipkin-common'
 
 include 'zipkin-collector'
 include 'zipkin-collector-core'
-//include 'zipkin-collector-scribe'
+include 'zipkin-collector-scribe'
 
 /////////////////////////////////////////////////////
 // Libraries wrapping clients to external services //
