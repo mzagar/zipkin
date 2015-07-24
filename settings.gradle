@@ -6,6 +6,18 @@ rootProject.name = 'zipkin'
 // Not all projects depend on this!
 include 'zipkin-common'
 
+///////////////////////////////////////////////////////////////////////////////////////////
+// Projects with outputs that are useful on their own: documentation, examples, services //
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//include 'doc'
+//include 'zipkin-example'
+//include 'zipkin-redis-example'
+//include 'zipkin-collector-service'
+//include 'zipkin-query-service'
+include 'zipkin-web'
+//include 'zipkin-aggregate'
+
 ///////////////
 // Receivers //
 ///////////////
