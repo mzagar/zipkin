@@ -6,6 +6,13 @@ rootProject.name = 'zipkin'
 // Not all projects depend on this!
 include 'zipkin-common'
 
+///////////////
+// Receivers //
+///////////////
+
+include 'zipkin-receiver-scribe'
+include 'zipkin-receiver-kafka'
+
 /////////////////////////////////////
 // Collector, and Collector inputs //
 /////////////////////////////////////

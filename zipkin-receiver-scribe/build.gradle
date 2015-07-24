@@ -1,0 +1,9 @@
+dependencies {
+	compile finagle("thriftmux"),
+			util("zk"),
+			zipkin('collector', 'zookeeper', 'scrooge')
+
+	runtime slf4jLog4j12
+
+	testCompile scalaTestDeps
+}
