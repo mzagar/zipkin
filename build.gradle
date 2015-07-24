@@ -60,10 +60,12 @@ subprojects {
 
     repositories {
         jcenter()
-        maven { url "https://maven.twttr.com/" }
-        maven { url "http://repo.typesafe.com/typesafe/releases/" }
-        // For Cassandra
+        maven { url 'https://maven.twttr.com/' }
+        maven { url 'http://repo.typesafe.com/typesafe/releases/' }
+        // For zipkin-cassandra deps and com.twitter:kafka
         maven { url 'http://conjars.org/repo' }
+        // For storm-kafka
+        maven { url 'https://clojars.org/repo' }
     }
 
     dependencies {

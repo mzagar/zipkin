@@ -1,0 +1,19 @@
+// SBT migration notes:
+//  - using gradle-onejar plugin for PackageDist; the `build` task now generates a fat jar
+//  - TODO BuildProperties is not ported at all
+apply from: '../gradle-onejar.plugin'
+ext {
+	mainClass = 'com.twitter.zipkin.collector.Main'
+}
+
+dependencies {
+	compile zipkin(
+			'collector-core', 'collector-scribe', 'receiver-kafka',
+			'query-core', 'kafka', 'anormdb', 'hbase', 'mongodb')
+
+	testCompile testDependencies
+}
+
+sourceSets.test.resources {
+	srcDir 'config'
+}
